@@ -1,0 +1,12 @@
+<div
+  class="drag-image"
+  (dragover)="checkTheOver()"
+  (dragleave)="checkTheLeave()"
+  (drop)="checkTheDrop()"
+>
+  <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+  <h6 class="titleTheDragDropFile">Drag & Drop File Here</h6>
+  <span>OR</span>
+  <button class="browseButton" (click)="clickTheInput()">Browse File</button>
+  <input type="file" hidden class="inputFile" (change)="checkTheChanges()" />
+</div>

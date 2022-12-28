@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 5rem;
+    font-size: 1.5rem;
+}
+
+.bg-featured-blog {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 15rem;
+}
+
+.features-titles {
+    font-size: 1.6rem;
+}

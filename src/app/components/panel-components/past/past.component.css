@@ -1,0 +1,22 @@
+.title-main {
+    font-weight: bold;
+}
+
+.card {
+    background-color: #dfe0e1;
+    border: none;
+}
+
+.card:hover {
+    background-color: #c4c4c4;
+}
+
+.recent-title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.past-desc {
+    font-weight: bold;
+    user-select: none;
+}

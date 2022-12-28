@@ -1,0 +1,94 @@
+<!-- <h5 class="title-main display-6 mb-5">Dosyalar</h5>
+<div class="contanier-fluid">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-xl-2" style="background-color: #dfe0e1">
+      <div class="card p-3" style="width: 100%">
+        <img
+          src="https://1.downloader.disk.yandex.com.tr/preview/f6071ec5bb318fc86f6dba52f722230a5efc7ba2d85e2cb2fe4d6d34107d0a85/inf/fwhLIia_-zlk2uITaqxgbGJbR3ANcQde87h7hiBT0GhEI8fhcC9IFRIL8W4OBV0J-yLh1Ds-lBckf41RQO7cPQ%3D%3D?uid=480948071&filename=Ay%C4%B1c%C4%B1klar.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=480948071&tknv=v2&size=1903x937"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <p class="card-text text-center">
+            Ayılar. <span class="file-extention">jpg</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+<div
+  class="flex w-full h-screen items-center justify-center bg-grey-lighter"
+  style="width: 100%; margin: auto; max-width: 100vh"
+>
+  <label
+    (dragover)="addClassAndText()"
+    (dragleave)="leaveAllClass()"
+    style="width: 60%"
+    class="flex upload-bg flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white"
+  >
+    <svg
+      class="w-8 h-8"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+    >
+      <path
+        d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"
+      />
+    </svg>
+    <span class="mt-2 text-base leading-normal d-none">Select a file</span>
+    <input type="file" class="hidden d-none" />
+  </label>
+</div> -->
+
+<div class="wrapper m-auto">
+    <header>File Upload</header>
+    <form action="#" id="formmain" (click)="cliktheInputFile()">
+        <input multiple hidden type="file" (change)="onChange($event)" name="file-input" class="file-input" id="file-input" />
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Browse File to Upload</p>
+    </form>
+    <!-- <section class="progress-area">
+    <li class="row">
+      <i class="fas fa-file-alt"></i>
+      <div class="content">
+        <div class="details">
+          <span class="name"> image_1.png . Uploading </span>
+          <span class="percent">50%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </li>
+  </section> -->
+    <section class="uploaded-area">
+        <!-- <li class="row">
+      <div class="content">
+        <i class="fas fa-file-alt"></i>
+        <div class="details">
+          <span class="name">image_1.png</span>
+          <span class="size">70 KB</span>
+        </div>
+      </div>
+      <i class="bi bi-check2"></i>
+    </li> -->
+
+        <li class="row" *ngIf="mediaSize != 0">
+            <div class="content">
+                <a href="#" class="showFile"> </a>
+                <i class="bi bi-file-earmark-arrow-up-fill"></i>
+                <div class="details">
+                    <span class="name">{{ mediaName }}</span>
+                    <span class="size">{{ mediaSize }}</span>
+                </div>
+                <i class="bi bi-check2 ms-auto"></i>
+            </div>
+        </li>
+    </section>
+</div>
+
+<img src="" alt="" class="denem" />

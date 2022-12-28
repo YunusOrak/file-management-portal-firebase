@@ -1,0 +1,80 @@
+<div class="container-fluid login-main-box">
+    <div class="">
+        <div class="rounded d-flex justify-content-center" style="padding-top: 200px">
+            <div class="col-md-4 col-sm-12 customize-login-box shadow-lg p-5 bg-light">
+                <div class="backTheMain">
+                    <a href="#" [routerLink]="['']">
+                        <i class="bi bi-arrow-90deg-left"></i>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-primary" *ngIf="login">Sign In</h3>
+                    <h3 class="text-success" *ngIf="!login">Sign Up</h3>
+                </div>
+                <form action="" (ngSubmit)="kontrol()">
+                    <div class="p-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-primary" [ngClass]="login ? 'bg-primary' : 'bg-success'">
+                <i class="bi bi-person-plus-fill text-white"></i>
+              </span>
+                            <input type="text" *ngIf="login" class="form-control" placeholder="Mail" [(ngModel)]="logandreg.mail" name="loguser" />
+                            <input type="text" *ngIf="!login" class="form-control" placeholder="Mail" [(ngModel)]="logandreg.mail" name="reguser" />
+                        </div>
+
+                        <!-- ================== DISPLAYNAME ================== -->
+                        <div class="input-group mb-3" *ngIf="!login">
+                            <span class="input-group-text bg-primary bg-success">
+                              <i class="bi bi-person-gear text-white"></i>                         
+                              </span>
+                            <input type="text" class="form-control" placeholder="Username" [(ngModel)]="logandreg.displayName" name="displayname" />
+                        </div>
+
+                        <!-- ================== DISPLAYNAME ================== -->
+
+
+
+
+
+
+
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-primary" [ngClass]="login ? 'bg-primary' : 'bg-success'"><i class="bi bi-key-fill text-white"></i
+              ></span>
+                            <input type="password" *ngIf="login" class="form-control" placeholder="password" [(ngModel)]="logandreg.password" name="logpass" />
+                            <input type="password" *ngIf="!login" class="form-control" placeholder="password" [(ngModel)]="logandreg.password" name="regpass" />
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                Remember Me
+              </label>
+                        </div>
+                        <button *ngIf="login" class="btn btn-primary text-center mt-2" type="submit">
+              <!-- [routerLink]="['/panel']" -->
+              Login
+            </button>
+                        <button *ngIf="!login" class="btn btn-success text-center mt-2" type="submit">
+              Register
+            </button>
+                        <p class="text-center mt-5">
+                            Don't have an account?
+                            <span *ngIf="login" class="text-primary convertlikealink" (click)="login = false">Sign Up</span
+              >
+              <span
+                *ngIf="!login"
+                class="text-success convertlikealink"
+                (click)="login = true"
+                >Sign In</span
+              >
+            </p>
+            <p class="text-center text-primary convertlikealink">
+              Forgot your password?
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

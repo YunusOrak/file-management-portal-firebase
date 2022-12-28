@@ -1,0 +1,12 @@
+.title-main {
+    font-weight: bold;
+}
+
+.card {
+    background-color: #dfe0e1;
+    border: none;
+}
+
+.card:hover {
+    background-color: #c4c4c4;
+}

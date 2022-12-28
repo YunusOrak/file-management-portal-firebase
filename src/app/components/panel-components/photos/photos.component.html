@@ -1,0 +1,17 @@
+<h5 class="title-main display-6 mb-5">Fotoğraflar</h5>
+<div class="contanier-fluid">
+    <div class="row">
+        <h5 class="recent-title">Dün</h5>
+        <div class="col-md-4 col-lg-4 col-xl-2" style="background-color: #dfe0e1" *ngFor="let photo of photos">
+            <div class="card p-3" style="width: 100%">
+                <img [src]="photo.path" class="card-img-top" [alt]="photo.mediaName" />
+                <div class="card-body">
+                    <p class="card-text text-center">
+                        {{ photo.mediaName }}
+                        <span class="file-extention">{{ photo.mediaSize }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

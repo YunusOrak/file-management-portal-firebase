@@ -1,0 +1,14 @@
+<h5 class="title-main display-6 mb-5">Geçmiş</h5>
+<div class="contanier-fluid">
+    <div class="row mb-5">
+        <div class="col-md-12 col-lg-12 col-xl-12" style="background-color: #dfe0e1" *ngFor="let past of userPasts">
+            <h5 class="recent-title">{{ past.date }}</h5>
+            <div class="card p-1 px-3" style="width: 100%">
+                <div class="card-body p-0">
+                    <span class="time text-grey">{{ past.time }}</span>
+                    <span class="text-primary ms-3 past-desc">{{ past.message }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgb(255 255 255 / 10%);
+    transition: all 0.4s;
+}
+
+.page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+/* for toggle behavior */
+
+#sidebar.active {
+    margin-left: -17rem;
+}
+
+#content.active {
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -17rem;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+    #content.active {
+        margin-left: 17rem;
+        width: calc(100% - 17rem);
+    }
+}
+
+
+/*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSE
+  * ==========================================
+  *
+  */
+
+#content {
+    background-color: #DFE0E1;
+}
+
+.separator {
+    margin: 3rem 0;
+    border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+    letter-spacing: 0.1em;
+}
+
+.text-gray {
+    color: #aaa;
+}
+
+.text-wheat {
+    color: #F1F1F1 !important;
+}
+
+.bg-panelHeader {
+    background: black !important;
+    color: #F1F1F1 !important;
+    border-bottom: 1px solid #c1c2cc;
+}
+
+.nav-flex-column-bg {
+    background: black !important;
+    color: #F1F1F1 !important;
+}
+
+#sidebar {
+    background: black !important;
+    color: #F1F1F1 !important;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item {
+    border-radius: 6px;
+}
+
+.active-nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+.not-working a {
+    color: grey !important;
+}
+
+.not-working:hover {
+    background-color: transparent !important;
+}
