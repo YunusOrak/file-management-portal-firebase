@@ -1,4 +1,5 @@
 # live https://yo-ng-final.netlify.app/
+*tutorial* https://youtu.be/bv40gDXAVUg
 
 ![image](https://user-images.githubusercontent.com/40091165/212008926-2a91b705-6df9-4f5d-960f-c13ad8092721.png)
 
