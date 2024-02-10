@@ -24,14 +24,12 @@ export class AuthService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     let s: Info = new Info();
     var sonuc: boolean = false;
-    // if (this.servis.OturumKontrol(this.userName, this.password, this.status)) {
     if (this.servis.aktiflikkontrol()) {
       sonuc = true;
     } else {
-      // alert('Yetkiniz yok giriş yapamazsınız');
 
       s.islem = false;
-      s.mesaj = 'Lütfen önce giriş yapınız!';
+      s.mesaj = 'Please log in first!';
       this.toast.applyToast(s);
 
       this.router.navigate(['/login']);
@@ -39,21 +37,3 @@ export class AuthService implements CanActivate {
     return sonuc;
   }
 }
-
-// }
-// @Injectable()
-// export class AuthGuard implements CanActivate {
-//   constructor(
-//     public servis: DataService
-//   ) {
-
-//   }
-//   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-//     var sonuc: boolean = false;
-//     if (this.servis.OturumKontrol()) {
-//       sonuc = true;
-//     } else {
-//       location.href = "/login";
-//     }
-//     return sonuc;
-//   }
